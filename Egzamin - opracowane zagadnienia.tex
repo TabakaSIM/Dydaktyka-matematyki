@@ -159,6 +159,7 @@
 		Przeciw $0\in\mathbb{N}$:
 		\begin{itemize}
 			\item wzór na średnią, $n=0$ nie może być w mianowniku
+			\item 
 			\item TODO
 		\end{itemize}
 	}
@@ -168,7 +169,7 @@
 	$(G,*) \:: * \:: G \times G \longrightarrow G$
 	\begin{enumerate}[1)]
 		\item $\forall_{a,b,c \in G} \;(a*b)*c = a*(b*c)$ (łączność)
-		\item $\exists_{e\in G} \; \forall_{a\in G} \; c*a=a*e=a$ (istnieje element neutralny)
+		\item $\exists_{e\in G} \; \forall_{a\in G} \; e*a=a*e=a$ (istnieje element neutralny)
 		\item $\forall_{a\in G} \; \exists_{b\in G} \; a*b=b*a=e$ (istnieje element przeciwny)
 	\end{enumerate}
 	}
@@ -207,17 +208,17 @@
 		\end{enumerate}
 		
 		\textbf{Pierścień z jedynką}\\
-		$\exists_{1\in R} \forall a\cdot1=1\cdot a=a$
+		$\exists_{1\in R} \forall_{a\in\mathbb{R}} a\cdot1=1\cdot a=a$
 	}
 	
 	\item Podać definicję dzielników zera.
 	\Odp{
-		Element $a$ pewnego pierścienia, dla którego istnieje element $b$, taki że $ab=0$.
+		Element $a$ pewnego pierścienia, dla którego istnieje taki element $b$, że $ab=0$ oraz $b\neq 0$.
 	}
 	
 	\item Podać formalną definicję liczb wymiernych (na bazie liczb całkowitych). Jakiej struktury jest to szczególny przypadek?
 	\Odp{
-	$\frac{\mathbb{Z}\times (\mathbb{Z}\setminus\emptyset)}{\sim} \qquad (m,n)\sin (a,b) \Leftrightarrow m\cdot b=n\cdot a$\\
+	$\frac{\mathbb{Z}\times (\mathbb{Z}\setminus\emptyset)}{\sim} \qquad (m,n)\sim (a,b) \Leftrightarrow m\cdot b=n\cdot a$\\
 	$\frac{m}{n}=\frac{a}{b}$ np. $(3,7)=(-6,-14)=\frac{3}{7}$
 	}
 	
@@ -247,7 +248,7 @@
 	\item Udowodnić, że $\sqrt{2}$ nie jest liczbą wymierną.
 	\Odp{
 		Niech $\sqrt{2}$ będzie liczbą wymierną, można ją zatem zapisać w postaci 
-		$$\sqrt{2}=\frac{a}{b} \Leftrightarrow 2=\frac{a^2}{b^2} \Leftrightarrow 2b^2-a^2$$
+		$$\sqrt{2}=\frac{a}{b} \Leftrightarrow 2=\frac{a^2}{b^2} \Leftrightarrow 2b^2=a^2$$
 		Rozważmy przypadki 
 		\begin{enumerate}[1$^\circ$]
 			\item $a$ i $b$ nieparzyste - dostajemy natychmiast sprzeczność
@@ -312,12 +313,12 @@
 	\item Podać definicję zbioru ograniczonego z góry i kresu górnego.
 	\Odp{
 	$A-$ ograniczony z góry $\Leftrightarrow \exists_c : \forall_{x\in A} x\leq c$\\
-	$p-$ kres górny $A \overset{\textbf{def}}{\Leftrightarrow} p=\min\{b:\forall_{x\in A}\} x\leq b$
+	$p-$ kres górny $A \overset{\textbf{def}}{\Leftrightarrow} p=\min\{b:\forall_{x\in A} : x\leq b\}$
 	}
 	
 	\item Podać definicję porządku ciągłego.
 	\Odp{
-	Liniowy porządek jest ciągły $\Leftrightarrow \forall_{A\neq \emptyset, \qquad A}$ ograniczony z góry, wsród ograniczeń istnieje ograniczenie najmniejsze
+	Liniowy porządek jest ciągły $\Leftrightarrow \forall_{A\neq \emptyset}$ $A$ ograniczony z góry, wsród ograniczeń istnieje ograniczenie najmniejsze
 	}
 	
 	\item Podać interpretację geometryczną zbioru liczb rzeczywistych.
@@ -335,7 +336,8 @@
 	
 	\item Jak się definiuje sumę liczb rzeczywistych, iloczyn liczb rzeczywistych oraz własność „$a < b$” dla liczb rzeczywistych według konstrukcji Cantora?
 	\Odp{
-		Porządek $(a_n) < (b_n) \Leftrightarrow \exists_{\epsilon>0} \exists_{k_0} \forall_{k>k_0} a_k + \epsilon > b_k$
+		Jak wyżej mamy, że $[(a_n)]$ - granica (liczba rzeczywista)\\
+		Porządek $(a_n) < (b_n) \Leftrightarrow \exists_{\epsilon>0} \exists_{k_0} \forall_{k>k_0} a_k + \epsilon < b_k$
 		
 		$(a_n)\in \mathbb{Q} \Leftrightarrow (a_n)$ zbieżny (w $\mathbb{R}$)
 		
@@ -381,8 +383,8 @@
 		\item $a\in \mathbb{Q}, b\notin \mathbb{Q} \Rightarrow a+b\notin\mathbb{Q}$, bo gdyby $a+b\in \mathbb{Q} \Rightarrow a+b-a=b\in\mathbb{Q}$ sprzeczność
 		\item $a,b\notin\mathbb{Q},$ to $a+b$ może być i wymierne i niewymierne
 		$\sqrt{2}+\sqrt{2}\notin\mathbb{Q}$ oraz $\sqrt{2}+1-\sqrt{2}\in \mathbb{Q}$
-		\item $a\in\mathbb{Q}, b\notin\mathbb{Q} \Rightarrow a\cdot b \in \mathbb{Q}$, bo gdyby $a\cdot b \in \mathbb{Q}$, to $b=\frac{1}{a} \cdot ab \in \mathbb{Q}$ sprzeczność
-		\item $a,b\notin\mathbb{Q}$, to $a\cdot b$ może być i wymierne i niewymierne
+		\item $a\in\mathbb{Q}, b\notin\mathbb{Q} \Rightarrow a\cdot b \notin \mathbb{Q}$, bo gdyby $a\cdot b \in \mathbb{Q}$, to $b=\frac{1}{a} \cdot ab \in \mathbb{Q}$ sprzeczność
+		\item $a,b\notin\mathbb{Q}$, to $a\cdot b$ może być wymierne lub niewymierne
 		$\sqrt{2}\cdot\sqrt{2}\in \mathbb{Q}$ oraz $\sqrt{2}\sqrt{3}\notin\mathbb{Q}$
 	\end{itemize}
 	}
@@ -439,11 +441,11 @@
 	
 	\item Udowodnić, że między dowolne dwie liczby rzeczywiste można wstawić liczbę niewymierną.
 	\Odp{
-		$$\forall_{a,b\in \mathbb{R}, a<b} \exists_{p\in \mathbb{R}\setminus\mathbb{Q}} a<p<b$$
+		$$\forall_{a,b\in \mathbb{R},\: a<b} \:\exists\:_{p\in \mathbb{R}\setminus\mathbb{Q}} \:a<p<b$$
 		D: $x,y\in\mathbb{R}$
 		
-		$\exists_{a\in \mathbb{Q}}: x<a<y \qquad \exists_{b\in\mathbb{Q}} : a<b<y 
-		\qquad\exists_{p\in \mathbb{Q}} x<a<p<b<y$
+		$\exists\:_{a\in \mathbb{Q}}: x<a<y \qquad \exists\:_{b\in\mathbb{Q}} : a<b<y 
+		\qquad\exists\:_{p\in \mathbb{R}\setminus\mathbb{Q}}\: x<a<p<b<y$
 	}
 	
 	\item Zdefiniować zbiór liczb zespolonych.
@@ -470,15 +472,17 @@
 	
 	\item Określić (ogólnie) historię znajdywania wzorów ogólnych na rozwiązywanie równań n-tego stopnia (co zrobili: Tartaglia, Cardano, Ferrari, Abel, Galois).
 	\Odp{
-		Tartaglia
+		Tartaglia -
 		
-		Cardano
+		Cardano -
 		
-		Ferrari
+		Ferrari -
 		
-		Abel
+		Abel -
 		
-		Galois
+		Galois -
+		
+		TODO
 	}
 	
 	\item Sformułować zasadnicze twierdzenie algebry.
@@ -488,7 +492,7 @@
 	\item Zdefiniować kwaterniony.
 	\Odp{
 		$\mathbb{R}^4 \qquad \begin{bmatrix}
-			a+cb+jc+kd\\
+			a+ib+jc+kd\\
 			i^2=j^2=k^2=ijk=-1
 		\end{bmatrix} \Rightarrow ij=k, ik=j, jk=i, ijk=-1, ijkk=-k, -ij=-k, ij=k$
 	}

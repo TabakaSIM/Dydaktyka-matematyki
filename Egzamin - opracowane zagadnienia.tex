@@ -159,7 +159,7 @@
 		Przeciw $0\in\mathbb{N}$:
 		\begin{itemize}
 			\item wzór na średnią, $n=0$ nie może być w mianowniku
-			\item 
+			\item aksjomatyka Peano zaczyna się od 1
 			\item TODO
 		\end{itemize}
 	}
@@ -449,6 +449,22 @@
 	}
 	
 	\item Zdefiniować zbiór liczb zespolonych.
+	\Odp{
+			\noindent
+			\begin{minipage}[t]{0.55\textwidth}
+				\vspace{0pt}  % KLUCZOWE: wymusza wyrównanie do góry
+				Liczby zespolone są rozszerzeniem zbioru liczb rzeczywistych.\\[0.5em]
+				$i$ – jednostka urojona,  $\qquad i^2 = -1$.\\[0.5em]
+				$z = (a, b) = a + bi$, przy czym jeśli $b = 0$, to $z \in \mathbb{R}$.\\[0.5em]
+				
+			\end{minipage}%
+			\hfill
+			\begin{minipage}[t]{0.4\textwidth}
+				\vspace{0pt}  % KLUCZOWE: wymusza wyrównanie do góry
+				\includegraphics[width=\linewidth]{uz.png}
+			\end{minipage}
+	}
+	
 	\item Podać postać trygonometryczną liczby zespolonej; zdefiniować moduł liczby zespolonej.
 	\Odp{
 		$$z=a+ib$$
@@ -458,7 +474,7 @@
 	
 	\item Uzasadnić, dlaczego niewłaściwym jest zapis liczby i jako $\sqrt{-1}$.
 	\Odp{
-		TODO
+		$\sqrt{-1}$  jest to zbiór elementowy $\{i,-i\}$, a nie jedna liczba.
 	}
 	
 	\item Podać „dowód” błędnego faktu, że $1 = -1$ z wykorzystaniem zapisu „$\sqrt{-1}$” i pokazać	błąd w tym dowodzie.
@@ -472,18 +488,17 @@
 	
 	\item Określić (ogólnie) historię znajdywania wzorów ogólnych na rozwiązywanie równań n-tego stopnia (co zrobili: Tartaglia, Cardano, Ferrari, Abel, Galois).
 	\Odp{
-		Tartaglia -
+		\textbf{Tartaglia} – w XVI wieku odkrył metodę rozwiązywania równań sześciennych w szczególnym przypadku (tzw. równania zredukowanego). Przekazał swój sposób Girolamo Cardano pod warunkiem zachowania go w tajemnicy.
 		
-		Cardano -
+		\textbf{Cardano} – opublikował w 1545 r. w \emph{Ars Magna} ogólny wzór na pierwiastki równań sześciennych, wykorzystując metodę Tartaglii i własne uogólnienia. Jego praca zapoczątkowała rozwój algebry symbolicznej.
 		
-		Ferrari -
+		\textbf{Ferrari} – uczeń Cardana, rozwiązał ogólnie równania czwartego stopnia (równania bi-kwadratowe) – jego metoda opiera się na sprowadzeniu równania czwartego stopnia do dwóch równań kwadratowych.
 		
-		Abel -
+		\textbf{Abel} – w 1824 roku udowodnił, że nie istnieje ogólny wzór (wyrażony przez pierwiastki) dla równań algebraicznych stopnia piątego i wyższego. To był przełom w rozumieniu granic klasycznej algebry.
 		
-		Galois -
-		
-		TODO
+		\textbf{Galois} – rozwinął teorię grup i stworzył podstawy teorii Galois, która pozwala precyzyjnie określić, kiedy dane równanie algebraiczne da się rozwiązać przez pierwiastki. Pokazał, że rozwiązanie zależy od struktury grupy permutacji pierwiastków równania.
 	}
+	
 	
 	\item Sformułować zasadnicze twierdzenie algebry.
 	\Odp{
@@ -511,42 +526,98 @@
 	
 	\item Zdefiniować liczby naturalne wg aksjomatów Peano.
 	\Odp{
-			
+			$\mathbb{N}$, operacja następnika $a \rightarrow N(a)$
+			\begin{enumerate}[1)]
+				\item $1\in \mathbb{N} \qquad (0\in \mathbb{N})$
+				\item $\forall_{a\in\mathbb{N}} N(a)\neq 1$
+				\item $\forall_{a\in \mathbb{N}} a$ ma dokładnie jeden następnik
+				\item $N(a)=N(b) \Leftrightarrow a=b$
+				\item $\begin{bmatrix}
+					A\subset \mathbb{N}\\
+					1\in A\\
+					n\in A \Rightarrow n+1\in A
+				\end{bmatrix} \Rightarrow A=\mathbb{N}$
+			\end{enumerate}
 	}
 	
 	\item Zdefiniować liczby naturalne wg aksjomatów Wilkosza.
 	\Odp{
-	
+	\begin{enumerate}[1)]
+		\item $\exists_n : n\in\mathbb{N}$ ($\neq \emptyset$)
+		\item $\forall_{k\in\mathbb{N}} \exists_{n\in\mathbb{N}}:k<n$ (nie ograniczony z góry)
+		\item $\forall_{k,n\in \mathbb{N}} k<m \Rightarrow ~(m<k)$ (antysymetria)
+		\item $(A\subset\mathbb{N}, \exists_{k\in A})(\neq\emptyset) \Rightarrow \exists_{i\in A} \forall_{n\in A} i\leq n$ (zasada minimum)
+		\item $(A\subset\mathbb{N}, \exists_{k\in A})(\neq\emptyset)$ oraz  $ (\exists_{i\in \mathbb{N}} \forall_{m\in A} m\leq i)\Rightarrow \exists_{k\in A} \forall_{l\in A} l\leq j$ (ograczinony z góry ma element największy)
+	\end{enumerate}
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej z użyciem zapisu „$T_n$” (własność prawdziwa dla liczby naturalnej $n$).
 	\Odp{
-	
+		$A\subset \mathbb{N}$\\\\
+		
+		$\begin{bmatrix}
+			1) & n_0\in A\\
+			2) & \forall_{n\geq n_0} n\in A \Rightarrow n+a\in A
+		\end{bmatrix} \Rightarrow A \supset \mathbb{N}_{n_0}$\\\\
+		
+		$T_n$ - własność dotycząca liczby naturalnej $n$ jest prawdziwe\\\\
+		
+		$\begin{bmatrix}
+			1) & T_n\\
+			2) & \forall_{n\geq n_0} T_n\Rightarrow T_{n+1}
+		\end{bmatrix} \Rightarrow \forall_{n\geq n+0} T_n$
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej zapisaną za pomocą należenia liczb naturalnych do pewnego zbioru.
 	\Odp{
-	
+		TODO
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej z założeniem w drugim kroku dotyczącym „wszystkich poprzedzających liczb”.
 	\Odp{
-	
+		TODO
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej „z przeskokiem o dwie liczby”.
 	\Odp{
-	
+		TODO
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej w wersji indukcji wstecznej.
 	\Odp{
+		\begin{enumerate}[1)]
+			\item $T_0$
+			\item $\exists_{n_k}, n_k \rightarrow \infty (k\rightarrow \infty), n_0 = 0, (n_k)$ - silnie rosnący $T_{n_k} \Rightarrow T_{n_{k+1}}$
+			\item $ \forall_n\geq 1 t_n \Rightarrow T_{n-1}$
+		\end{enumerate}
 	
+		$\Rightarrow \forall_{n\in\mathbb{N}} T_n$
 	}
 	
 	\item Udowodnić równoważność zasady indukcji matematycznej z zasadą minimum.
 	\Odp{
+		Zasada minimum $\Leftrightarrow$ Zasada indukcji matematycznej
+		
+		"$\Rightarrow$"
+		
+		$\begin{bmatrix}
+			0\in A\\
+			\forall_{n\geq 0} n\in A \Rightarrow n+1\in A
+		\end{bmatrix} \overset{?}{\Rightarrow} A=\mathbb{N} $
 	
+		Hp. $A\neq \mathbb{N}$
+		
+		$B:= \mathbb{N}\setminus A, B\neq \emptyset$
+		
+		$0\in A \Rightarrow 0\notin B$
+		
+		Niech $k_0:= min B, k_0 >0$
+		
+		$k_0-1 \in \mathbb{N}, k_0-1\in B, k_0-1\in A$
+		
+		$k_0-1+1 = k_0 \in A$ sprzeczność\\\\
+		
+		"$\Leftarrow$"
 	}
 	
 	\item Udowodnić indukcyjnie, że zbiór n-elementowy ma $2n$ podzbiorów. Zwrócić szczególną uwagę na sformułowanie drugiego kroku indukcyjnego i odpowiednie podejście do jego dowodu.
@@ -1094,6 +1165,190 @@
 	\item Określić prawdziwość wzorów Viete’a dla trójmianu kwadratowego o współczynnikach rzeczywistych, dla którego wyróżnik $\Delta$ jest ujemny.
 	\Odp{
 		
+	}
+
+	\item Podać i udowodnić twierdzenie o podzielności przez $p$ i $q$ odpowiednich współczynników wielomianu o współczynnikach całkowitych, którego liczba wymierna $\frac{p}{q}$ jest pierwiastkiem ($\frac{p}{q}$ jest zapisane w postaci ułamka nieskracalnego).
+	\Odp{
+	
+	}
+	
+	\item Co można powiedzieć o wymiernych pierwiastkach wielomianu $a_nx + \dots + a_1x + a_0,$ którego współczynniki są liczbami całkowitymi? Udowodnić to twierdzenie.
+	\Odp{
+	
+	}
+	
+	\item Określić, co (jaki „obiekt”) może być nazywany rozwiązaniem równania czy nierówności.
+	\Odp{
+	
+	}
+
+	\item Rozwiązywać podstawowe równania i nierówności.
+	\Odp{
+	
+	}
+	
+	\item Podać podstawowy początek rozwiązywania nierówności typu $\frac{P(x)}{Q(x)} < 0$.
+	\Odp{
+	
+	}
+	
+	\item Rozwiązywać nierówności pierwiastkowe.
+	\Odp{
+	
+	}
+	
+	\item Omówić metodę analizy starożytnych stosowaną w równaniach logarytmicznych.
+	\Odp{
+	
+	}
+	
+	\item Podać schemat rozwiązywania nierówności z wartością bezwzględną.
+	\Odp{
+	
+	}
+
+	\item Rozwiązywać równania (nierówności), w których niewiadoma występuje w postaci	„związanej” (np. w formie $a^x$).
+	\Odp{
+	
+	}
+	
+	\item Uwalniać ułamki od niewymierności w mianowniku.
+	\Odp{
+	
+	}
+	
+	\item Wyjaśnić potrzebę uwalniania ułamków od niewymierności w mianowniku.
+	\Odp{
+	
+	}
+	
+	\item Podać definicję procentu.
+	\Odp{
+	
+	}
+	
+	\item Wyjaśnić różnicę między procentem a punktem procentowym.
+	\Odp{
+	
+	}
+	
+	\item Na czym polega błąd definiowania „ignotum per ignotum”?
+	\Odp{
+	
+	}
+	
+	\item Wytłumaczyć schematy definiowania „od ogółu do szczegółu” i z podziałem na klasy
+	równoważności (z przykładami).
+	\Odp{
+	
+	}
+	
+	\item Podać definicję trapezu i wyjaśnić, dlaczego inne definiowanie nie jest właściwe.
+	\Odp{
+	
+	}
+	
+	\item Podać definicję trapezu równoramiennego.
+	\Odp{
+	
+	}
+	
+	\item Podać przykłady pokazujące, że czasem pewne obiekty można definiować na różne
+	(istotnie) sposoby, ale nie ma to większego znaczenia, ale czasem ma ogromne znacze-
+	nie.
+	\Odp{
+	
+	}
+	
+	\item Podać „szkolną” definicję prawdopodobieństwa i wyjaśnić, na jakie aspekty należy
+	przy obliczeniach zwracać szczególną uwagę.
+	\Odp{
+	
+	}
+	
+	\item Podać i wyjaśnić paradoks Bertranda.
+	\Odp{
+	
+	}
+	
+	\item Podać definicję Cauchy’ego i definicję Heinego ciągłości funkcji $f : D \rightarrow \mathbb{R}$, przy czym $D \subset R$.
+	\Odp{
+	
+	}
+	
+	\item Czy funkcja tangens jest ciągła? Odpowiedź uzasadnić.
+	\Odp{
+		
+	}
+	
+	\item Udowodnić równoważność definicji Cauchy’ego i definicję Heinego ciągłości funkcji.
+	\Odp{
+	
+	}
+	
+	\item Sformułować twierdzenie o własności Darboux oraz twierdzenie Weierstrassa dla funkcji ciągłej $f : [a, b] \rightarrow \mathbb{R}$.
+	\Odp{
+	
+	}
+	
+	\item Podać definicję pochodnej funkcji określonej na podzbiorze $D$ zbioru $\mathbb{R}$ o wartościach rzeczywistych w punkcie $x_0 \in D$. Jakie założenie należy uczynić o zbiorze $D$, by można było mówić o pochodnej funkcji?
+	\Odp{
+
+	}
+	
+	\item Podać interpretację geometryczną pochodnej.
+	\Odp{
+		
+	}
+	
+	\item Podać warunek konieczny istnienia ekstremum lokalnego funkcji różniczkowalnej.
+	\Odp{
+		
+	}
+	
+	\item Podać warunek wystarczający istnienia maksimum/minimum lokalnego funkcji róż	niczkowalnej (ze zmianą znaku pochodnej) oraz dla funkcji dwukrotnie różniczkowalnej (z drugą pochodną).
+	\Odp{
+	
+	}
+	
+	\item Sformułować twierdzenie Rolle’a i twierdzenie Lagrange’a.
+	\Odp{
+	
+	}
+	
+	\item Sformułować regułę de l’Hospitala.
+	\Odp{
+	
+	}
+	
+	\item Wytłumaczyć, dlaczego przy korzystaniu z reguły de l’Hospitala nie należy używać skrótu „litera H napisana nad znakiem równości”.
+	\Odp{
+	
+	}
+	
+	\item Wytłumaczyć, dlaczego przy korzystaniu z reguły de l’Hospitala nie należy używać zapisu "$\lim\limits_{x\rightarrow p} \frac{f(x)}{g(x)} = \lim\limits_{x\rightarrow p} \frac{f'(x)}{g'(x)}$".
+	\Odp{
+	
+	}
+	
+	\item Omówić ryzyko stosowania reguły de l’Hospitala związane z niesprawdzeniem założeń.
+	\Odp{
+	
+	}
+	
+	\item Dlaczego nie można z wykorzystaniem reguły de l’Hospitala liczyć granicy $\lim\limits_{x\rightarrow0}\frac{\sin x}{x}$ ?
+	\Odp{
+	
+	}
+	
+	\item Podać fałszywy „dowód” (na podstawie reguły de l’Hospitala) tego, że jeśli funkcja jest różniczkowalna, to jest klasy $C^1$ i pokazać błąd w tym dowodzie.
+	\Odp{
+	
+	}
+	
+	\item Wytłumaczyć, dlaczego nie należy robić rzeczy podanych na załączonej „Czarnej liście”.
+	\Odp{
+	
 	}
 	
 	\end{enumerate}

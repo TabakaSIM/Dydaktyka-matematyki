@@ -708,16 +708,43 @@
 	
 	\item Udowodnić, że suma kątów w n-kącie wynosi $(n - 2) \cdot 180^\circ$, wykorzystując twierdzenie o istnieniu przekątnej zawartej w wielokącie.
 	\Odp{
-		
+		\begin{enumerate}[I]
+			\item ok
+			\item W dolownym wielokącie istnieje przekątna zwarta w tym wielokącie.
+			
+			$T_3.\dots,T_n\Rightarrow T_{n+1}$
+			
+			\includegraphics[width=\linewidth]{1ind180.jpeg}
+			
+			Przekątna dzieli $n+1$-kąt na $k$-kąt i $l$-kąt $(k,l\leq n, k+l=n+3)$.\\
+			
+			Suma kątów w $k$-kącie wynosi $(k-2)\cdot180^\circ$, podobnie w $l$-kącie wynosi $(l-2)\cdot180^\circ$.\\
+			
+			W $(n-1)$-kącie $(k-2)\cdot180^\circ + (l-2)\cdot180^\circ = (k+l-4)\cdot180^\circ=(n+3-4)\cdot180^\circ = (n-1)\cdot180^\circ =((n+1)-2)\cdot180^\circ$.\\
+			
+			Indukcja kończy dowód. 
+		\end{enumerate}
 	}
 	
 	\item Udowodnić, że suma kątów w n-kącie wynosi $(n - 2) \cdot 180^\circ$, wykorzystując twierdzenie o uchach (Two Ears Theorem).
 	\Odp{
-		
+		\begin{enumerate}[I]
+			\item ok
+			\item W każdym wielokącie istnieją co najmniej 2 "ucha".
+			
+			\includegraphics[width=\linewidth]{2ind180.jpeg}
+			
+			Bierzemy $(n+1)-kąt$. Ma in ucho $\Rightarrow$ odcinamy je. Powstaje $n$-kąt.
+			
+			$(n-2)\cdot180^\circ+180^\circ = (n-1)\cdot180^\circ = ((n+1)-2)\cdot180^\circ$
+			
+			Indukacja kończy dowód.
+		\end{enumerate}
 	}
 	
 	\item Pokazać, na czym polega błąd w indukcyjnym „dowodzie”, że suma kątów w n-kącie	wynosi $(n - 2) \cdot 180^\circ$, jeśli dowód przeprowadza się według schematu dodania trójkąta do n-kąta.
 	\Odp{
+		\textcolor{red}{TODO - Mam coś zapisane, ale brakuje mi dlaczego jest fałszywy - pewnie chodzi o "zepsucie" wypukłości wielokąta}
 		
 	}
 	
@@ -738,17 +765,26 @@
 	
 	\item Sformułować twierdzenie Pitagorasa.
 	\Odp{
-		
+		W trójkącie prostokątnym suma kwadratów przyprostokątnych jest równa kwadratowi przeciwprostokątej.
+		$$a^2+b^2=c^2$$
 	}
 	
 	\item Sformułować i wykazać twierdzenie o odcinkach stycznych.
 	\Odp{
+		Niesłusznie zwane "najmocniejszym twierdzeniem algebry".
+		
+		Dany jest okrąg oraz punkt $P$ leżacy poza okręgiem. Z punktu $P$ poprowadzono dwie półproste styczne do okręgu odpowiednio w punktach $A$ i $B$. Wowczas:	$$|PA|=|PB|$$
 		
 	}
 	
 	\item Sformułować twierdzenie Talesa (z wszystkimi możliwymi proporcjami).
 	\Odp{
+		Dane są dwie proste nierównoległe oraz dwie proste równoległe przecinające te proste (zobacz rysunek).
 		
+		\includegraphics[width=\linewidth]{tales.jpeg}
+		
+		Wówczas zachodzi:
+		$$\frac{a}{c}=\frac{b}{d}=\frac{a+b}{c+d}\qquad\frac{a}{a+b}=\frac{c}{c+d}=\frac{e}{f}$$
 	}
 	
 	\item Udowodnić twierdzenie Talesa metodą z „Elementów” Euklidesa.

@@ -1437,62 +1437,87 @@
 
 	\item Podać i udowodnić twierdzenie o podzielności przez $p$ i $q$ odpowiednich współczynników wielomianu o współczynnikach całkowitych, którego liczba wymierna $\frac{p}{q}$ jest pierwiastkiem ($\frac{p}{q}$ jest zapisane w postaci ułamka nieskracalnego).
 	\Odp{
-	
+		$W(x)=a_nx^n+\dots a_1x+a_0$, $a_i\in\mathbb{Z}$
+		
+		$\frac{p}{q}$ - pierwiastek wielomianu $\Rightarrow q|a_n$, $p|a_0$
+		
+		D: $a_n(\frac{p}{q})^n+a_{n-1}(\frac{p}{q})^{n-1}+\dots+a\frac{p}{q}+a_0=0 \quad |\cdot q^n$
+		
+		$a_np^n+a_{n-1}p^{n-1}q+\dots+a_1pg^{n-1}+a_0q^n=0$
+		
+		Niech $L=a_np^n+a_{n-1}p^{n-1}q+\dots+a_1pg^{n-1}$, $P=a_{n-1}p^{n-1}q+\dots+a_1pg^{n-1}+a_0q^n$
+		
+		Wówczas:\\
+		
+		\begin{tabular}{p{4cm} p{4cm} p{5cm}}
+			$p|L$ & $q|P$ &\\
+			$p|a_oq^n$ & $q|a_np^n$& ale $p,q$ względnie pierwsze\\
+			$p|a_0$&$q|a_n$&\\
+		\end{tabular}
+		
+		
 	}
 	
 	\item Co można powiedzieć o wymiernych pierwiastkach wielomianu $a_nx + \dots + a_1x + a_0,$ którego współczynniki są liczbami całkowitymi? Udowodnić to twierdzenie.
 	\Odp{
-	
+		TODO
 	}
 	
 	\item Określić, co (jaki „obiekt”) może być nazywany rozwiązaniem równania czy nierówności.
 	\Odp{
-	
+		Równianie $\rightarrow$ liczba (pierwiastek) lub zbiór liczb
+		
+		Nierówność $\rightarrow$ zbiór
 	}
 
 	\item Rozwiązywać podstawowe równania i nierówności.
 	\Odp{
-	
+		\textbf{Zostawiam jako ćwiczenie}
 	}
 	
 	\item Podać podstawowy początek rozwiązywania nierówności typu $\frac{P(x)}{Q(x)} < 0$.
 	\Odp{
-	
+		Podać dziedzinę oraz pomnożyć obie strony nierówności przez $(Q(x))^2$.
 	}
 	
 	\item Rozwiązywać nierówności pierwiastkowe.
 	\Odp{
-	
+		\textbf{Zostawiam jako ćwiczenie}
 	}
 	
 	\item Omówić metodę analizy starożytnych stosowaną w równaniach logarytmicznych.
 	\Odp{
-	
+		Omijamy założenia i rozwiązujemy równanie. Otrzymane rozwiązania podstawiamy i sprawdzamy ich poprawność.
 	}
 	
 	\item Podać schemat rozwiązywania nierówności z wartością bezwzględną.
 	\Odp{
-	
+		\textbf{Zostawiam jako ćwiczenie}
 	}
 
 	\item Rozwiązywać równania (nierówności), w których niewiadoma występuje w postaci	„związanej” (np. w formie $a^x$).
 	\Odp{
-	
+		\textbf{Zostawiam jako ćwiczenie} ($t=a^x$)
 	}
 	
 	\item Uwalniać ułamki od niewymierności w mianowniku.
 	\Odp{
-	
+		\textbf{Zostawiam jako ćwiczenie}
 	}
 	
 	\item Wyjaśnić potrzebę uwalniania ułamków od niewymierności w mianowniku.
 	\Odp{
-	
+		\begin{itemize}
+			\item wygląd
+			\item oszacowanie (np. możliwość dzielenia na kalkulatorze protstym - a czy Ty wiesz do czego służy MRC, MR+ i MR-?)
+			\item odnaleźć się w jakiej strukturze jesteśmy? $\{a+b\sqrt{2} : a,b\in\mathbb{Q}\}$
+			\item przygotowanie do działań na $\mathbb{C}$
+		\end{itemize}
 	}
 	
 	\item Podać definicję procentu.
 	\Odp{
-	
+		Procent jest to TODO
 	}
 	
 	\item Wyjaśnić różnicę między procentem a punktem procentowym.
@@ -1502,56 +1527,90 @@
 	
 	\item Na czym polega błąd definiowania „ignotum per ignotum”?
 	\Odp{
-	
+		„ignotum per ignotum” - nieznane przez nieznane
+		
+		Błąd polega w podawaniu obiektu definiowanego jego samego.  
 	}
 	
-	\item Wytłumaczyć schematy definiowania „od ogółu do szczegółu” i z podziałem na klasy
-	równoważności (z przykładami).
+	\item Wytłumaczyć schematy definiowania „od ogółu do szczegółu” i z podziałem na klasy równoważności (z przykładami).
 	\Odp{
-	
+		Zbudowanie hierarchi i stworzenie odpowiedniej struktury.
+		
+		\includegraphics[width=\linewidth]{czwor.jpg}
 	}
 	
 	\item Podać definicję trapezu i wyjaśnić, dlaczego inne definiowanie nie jest właściwe.
 	\Odp{
-	
+		Trapez jest to czworokąt, który posiada przynajmniej jedną parę boków równoległych.
+		
+		Dlaczego inne są niepoprawne?
+		\begin{itemize}
+			\item psują hierrachie "od ogółu do szczegółu"
+			\item definicja powinna działać dla prostokątów, równoległoboków itd.
+			\item ma być to klasa domknięta
+			\item pojawiają się problemy z pewnymi zadaniami (trapez o największym polu $\rightarrow$ prostokąt)
+		\end{itemize}
 	}
 	
 	\item Podać definicję trapezu równoramiennego.
 	\Odp{
-	
+	Trapez równoramienny to trapez o takich samych kątach przy podstawie \textbf{lub} trapez, który posiada oś symetrii prostopadłą do podstawy.
 	}
 	
-	\item Podać przykłady pokazujące, że czasem pewne obiekty można definiować na różne
-	(istotnie) sposoby, ale nie ma to większego znaczenia, ale czasem ma ogromne znacze-
-	nie.
-	\Odp{
-	
+	\item Podać przykłady pokazujące, że czasem pewne obiekty można definiować na różne (istotnie) sposoby, ale nie ma to większego znaczenia, ale czasem ma ogromne znaczenie.
+	\Odp{		
+		Czy $0\in\mathbb{N}$?\\\\
+		
+		Ciąg geometryczny
+		
+		$q=\frac{a_{n+1}}{a_n}$
+		
+		$2,0,0,0,\dots$ - czy $q=0$? - wszystko jedno\\\\
+		
+		$\sqrt[3]{a}=b \Leftrightarrow b^3=a$
+		
+		$\sqrt[3]{a}=b \Leftrightarrow a\geq0,\: b^3=a$\\\\
+		
+		$\sqrt[n]{a}=b \Leftrightarrow a\geq0,\: b\geq0,\: b^n=a$\\\\
 	}
 	
-	\item Podać „szkolną” definicję prawdopodobieństwa i wyjaśnić, na jakie aspekty należy
-	przy obliczeniach zwracać szczególną uwagę.
+	\item Podać „szkolną” definicję prawdopodobieństwa i wyjaśnić, na jakie aspekty należy	przy obliczeniach zwracać szczególną uwagę.
 	\Odp{
-	
+		$P(A)=\frac{\text{liczba zdarzeń sprzyjających}}{\text{liczba zdarzeń elemetarnych}}$ - przy założeniu jednakowo prawdopodobych zdarzeń
 	}
 	
 	\item Podać i wyjaśnić paradoks Bertranda.
 	\Odp{
-	
+		Na okręgu o promieniu 1 wybieramy losowo cieńciwe. Obliczyć prawdopodobieństwo, że jest ona dłuższa niż bok trójkąta równobocznego wpisanego w ten okrąg.
+		
+		\includegraphics[width=0.33\linewidth]{bertrand1.png}
+		\includegraphics[width=0.33\linewidth]{bertrand2.png}
+		\includegraphics[width=0.33\linewidth]{bertrand3.png}
+		
+		Prawdopodobieństwa są równe odpowiednio $\frac{1}{3},\frac{1}{2},\frac{1}{4}$. Wszystkie są poprawne i zależą od przyjętej przestrzeni probabilistycznej.
 	}
 	
 	\item Podać definicję Cauchy’ego i definicję Heinego ciągłości funkcji $f : D \rightarrow \mathbb{R}$, przy czym $D \subset R$.
 	\Odp{
-	
+		\textbf{Definicja Cauchy'ego}
+		
+		$f:d\rightarrow \mathbb{R}$ ciągła w $x_0 \Leftrightarrow \forall_{\epsilon>0}\exists_{\delta>0}: |x-x_0|<\delta \Rightarrow |f(x)-f(x_0)|<\epsilon$\\\\
+		
+		\textbf{Definicja Heinego}
+		
+		$\forall_{(xn)\subset D} x_n\rightarrow x_0 \Rightarrow f(x_n)\rightarrow f(x)$
+		
+		
 	}
 	
 	\item Czy funkcja tangens jest ciągła? Odpowiedź uzasadnić.
 	\Odp{
-		
+		Tak, bo punkty $\{\frac{\pi}{4}+k\pi:k\in\mathbb{Z}\}$ są poza dziedziną funkcji.
 	}
 	
 	\item Udowodnić równoważność definicji Cauchy’ego i definicję Heinego ciągłości funkcji.
 	\Odp{
-	
+		
 	}
 	
 	\item Sformułować twierdzenie o własności Darboux oraz twierdzenie Weierstrassa dla funkcji ciągłej $f : [a, b] \rightarrow \mathbb{R}$.
@@ -1566,7 +1625,9 @@
 	
 	\item Podać interpretację geometryczną pochodnej.
 	\Odp{
-		
+		Zobacz: \href{https://tenor.com/view/limite-math-y-axis-x-axis-calculus-gif-14990687}{Fajny gif 1}\hspace{1cm}
+		\href{https://tenor.com/view/derivative-gif-23137892}{Fajny gif 2}\hspace{1cm}
+		\href{https://tenor.com/view/derivada-gif-22383091}{Fajny gif 3}
 	}
 	
 	\item Podać warunek konieczny istnienia ekstremum lokalnego funkcji różniczkowalnej.

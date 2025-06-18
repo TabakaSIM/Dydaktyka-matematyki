@@ -163,6 +163,7 @@
 			\item Liczby rzymskie nie mają zapisu zera
 			\item Brak problemu z dzieleniem przez liczby naturalne
 			\item Coraz częściej jest używany zwrot "dodatnie liczby całkowite"
+			\item 0 nie posiada rozkładu na czynniki pierwsze
 		\end{itemize}
 	}
 	
@@ -748,6 +749,8 @@
 	\Odp{
 		\textcolor{red}{TODO - Mam coś zapisane, ale brakuje mi dlaczego jest fałszywy - pewnie chodzi o "zepsucie" wypukłości wielokąta}
 		
+		\textbf{Od Przemka:} gdy dodamy trójkąt, to może się okazać, że otrzymamy wielokąt o tej samej liczbie wierzchołków co na początku - czyli nie ma właściwej realizacji kroku indukcyjnego
+		
 	}
 	
 	\item Podać błędny indukcyjny „dowód” tego, że wszystkie dziewczęta mają ten sam kolor oczu (lub wszystkie koty są tego samego koloru, itp.) i pokazać błąd w dowodzie.
@@ -791,47 +794,79 @@
 	
 	\item Udowodnić twierdzenie Talesa metodą z „Elementów” Euklidesa.
 	\Odp{
+		\includegraphics[width=\linewidth]{tales_proof.jpeg}
 		
+		$$\frac{AP}{BP}=\frac{P_{\Delta APQ}}{P_{\Delta BPQ}}=\frac{P_{\Delta APQ}}{P_{\Delta QPC}}=\frac{AQ}{CQ}$$
 	}
 	
 	\item Wykazać, że jeśli w trójkącie dwa boki są równe, to i dwa kąty są równe.
 	\Odp{
+		\includegraphics[width=0.5\linewidth]{trj_proof_1.jpeg}
 		
+		$x=\sqrt{b^2-h^2}=y \Rightarrow x=y \Rightarrow \beta_1=\beta_2$, bo tą przystające.
 	}
 	
 	\item Wykazać, że jeśli w trójkącie dwa boki są równe, to i dwa kąty są równe bez wykorzystywania Aksjomatu V Euklidesa (czyli bez twierdzenia Pitagorasa).
 	\Odp{
+		\includegraphics[width=0.3\linewidth]{trj_proof_2.jpeg}
 		
+		$\Delta ABD$ i $\Delta ABD$ przystajce (cecha BBB) $\Rightarrow \alpha_1=\alpha_2\Rightarrow$ trójkąty u góry są przystające $\Rightarrow \beta_1=\beta_2$
 	}
 	
 	\item Wykazać, że jeśli w trójkącie dwa kąty są równe, to i dwa boki są równe.
 	\Odp{
-		
+		$\alpha_1=\alpha_2\Rightarrow \Delta$ przystające $\Rightarrow b_1=b_2$
 	}
 	
 	\item Wykazać, że jeśli w trójkącie dwa kąty są równe, to i dwa boki są równe bez wykorzystywania Aksjomatu V Euklidesa (czyli bez korzystania z tego, że suma kątów w trójkącie wynosi $180^\circ$).
 	\Odp{
+		\includegraphics[width=0.4\linewidth]{trj_proof_4.jpeg}
 		
+		Trójkąty $ABF$ i $ACE$ są przystające (cecha BKB). $\Rightarrow$ $\angle AEC = \angle BFA \Rightarrow |CE| = |CF| \Rightarrow |AB|=|AC|$
 	}
 	
 	\item Udowodnić, że symetralne boków trójkąta przecinają się w jednym punkcie.
 	\Odp{
+		Niech punkt $O$ oznacza przecięcie się dwóch symetralnych - boku AB i BC. Wówczas
+		
+		$
+		\begin{bmatrix}
+			\text{sym} AB \Rightarrow |AO|=|OB|\\
+			\text{sym} BC \Rightarrow |OB|=|OC|
+		\end{bmatrix} \Rightarrow |AO| = |OC| \Rightarrow O \in \text{sym} AC
+		$.
 		
 	}
 	
 	\item Udowodnić, że wysokości w trójkącie (precyzyjnie: proste zawierające wysokości w trójkącie) przecinają się w jednym punkcie.
 	\Odp{
+		\includegraphics[width=0.6\linewidth]{trj_proof_6.jpeg}
 		
+		Tworzymy proste równoległe do podtaw jak rysunek wyżej. Czerwone linie zawierają się w symetrialych $\Rightarrow$ przecinają się w jednym punkcie.
 	}
 	
 	\item Udowodnić, że dwusieczne kątów trójkąta przecinają się w jednym punkcie.
 	\Odp{
+		\includegraphics[width=0.6\linewidth]{trj_proof_7.jpeg}
 		
+		Dwusieczne kątów $\angle ABC$ i $\angle ACB$ musza się przecinać.
+	
+		Wówczas $OO_B=OO_A \wedge OO_C=OO_A \Rightarrow OO_C=OO_B$, czyli jest to dwusieczna kąta $\angle BAC$ 
 	}
 	
 	\item Udowodnić, że środkowe w trójkącie przecinają się w jednym punkcie, dzielącym każdą	ze środkowych w stosunku $1:2$.
 	\Odp{
+		\includegraphics[width=0.6\linewidth]{trj_proof_8.jpeg}
 		
+		Dorysowuwuje odcinek $EF$ równoległy do $BC$ (odwrotne tw. Talesa)
+		
+		Dziele $AO$ i $CO$ w połowie (punkty $M$ i $N$) $(|MN|\: ||\: |EF|)$
+		
+		Z twierdzenia Talesa $\frac{FE}{BC}=\frac{MN}{BC}=\frac{1}{2} \Rightarrow MN=EF \Rightarrow MNEF$ jest równoległobokiem.
+		
+		$O$ - środek równoległoboku, przekątne przecinają się w połowie.
+		
+		Czyli $O$ dzieli $CF$, $BE$ w stosunku $1:2$ 
 	}
 	
 	\item Zdefiniować funkcję, dziedzinę funkcji, przeciwdziedzinę funkcji.

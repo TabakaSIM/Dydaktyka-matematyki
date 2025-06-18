@@ -871,37 +871,99 @@
 	
 	\item Zdefiniować funkcję, dziedzinę funkcji, przeciwdziedzinę funkcji.
 	\Odp{
+		$X,Y$ - zbiory, $X,Y\neq \emptyset$
 		
+		$f:X\rightarrow Y \Leftrightarrow \forall_{x\in X} \exists!_{y\in Y}: (x,y)\in f$
+		
+		$X$ - dziedzina
+		
+		$Y$ - przeciwdziedzina
 	}
 	
 	\item Zdefiniować obraz i przeciwobraz (przy danej funkcji).
 	\Odp{
+		$f(A):= \{f(x):x\in A\}, A\subset X$ nazywamy obrazem zbioru A
 		
+		$f^{-1}(B):= \{x\in X: f(x)\in B\}, b\subset B$ nazywamy przeciwobrazem zbioru B 
 	}
 	
 	\item Wyjaśnić różnicę między symbolami "$\longrightarrow$" i „$\longmapsto$”.
 	\Odp{
+		$\longrightarrow$ - służy do określenia relacji między zbiorami
 		
+		$\longmapsto$ - opiusje działanie funkcji na konkretnych elementach
+		
+		Np. $f:\mathbb{C} \longrightarrow \mathbb{R}, \qquad z\longmapsto \text{Re}z$
 	}
 	
 	\item Zdefiniować injekcję, surjekcję i bijekcję.
 	\Odp{
+		Injekcja ($f$ różnowartościowa) $\Leftrightarrow f(x_1)=f(x_2)\Rightarrow x_1=x_2$ ($x_1\neq x_2 \Rightarrow f(x_1)\neq f(x_2)$)
 		
+		Surjekcja ($f$ - "na $Y$") $\Leftrightarrow \forall_{y\in Y} \exists_{x\in X} : f(x)=y$
+		
+		Bijekcja = Injekcja + Surjekcja
 	}
 	
 	\item Podać różne metody określania funkcji.
 	\Odp{
-		
+		\begin{itemize}
+			\item przepis (w tym wzór)
+			\item tableka
+			\item \textcolor{red}{TODO - Nie umiem się rozczytać}
+			
+			\includegraphics{help.jpeg}
+			
+			\item wykres
+		\end{itemize}
 	}
 	
-	\item Wykazać, że funkcja dana wzorem: $f (k, n) = \frac{(n+k)(n+k+1)}{2 + k}$ jest bijekcją z $\mathbb{N}^2$ na $\mathbb{N}$.
+	\item Wykazać, że funkcja dana wzorem: $f (k, n) = \frac{(n+k)(n+k+1)}{2}+k$ jest bijekcją z $\mathbb{N}^2$ na $\mathbb{N}$.
 	\Odp{
+		Czy surjekcja? $s\in \mathbb{N}$
 		
+		(?) $\exists_{k,n\in\mathbb{N}}: f(k,n)=s$
+		
+		$\exists_p: \frac{p(p+1)}{2}\leq s < \frac{(p+1)(p+2)}{2}$
+		
+		$k:=s-\frac{p(p+1)}{2}$ 
+		
+		$p=n+k\Rightarrow n=p-k = p-s+\frac{p(p+1)}{2}=\frac{2p+p(p+1)}{2}-s=\frac{p(p+3)}{2}-s$
+		
+		$n:=\frac{p(p+3)}{2}-s$
+	
+		$k+n=s-\frac{p(p+1)}{2}+\frac{p(p+3)}{2}-s=\frac{p(p+3-p-1)}{2}=\frac{2p}{p}=p$
+		
+		$f(k,n)=\frac{(k+n)(k+n+1)}{2}+k=\frac{p(p+1)}{2}+s-\frac{p(p-1)}{2}=s$\\\\
+		
+		Czy injekcja?	
+		
+		(?) $f(k,n) = f(\bar{k},\bar{n})\Rightarrow k=\bar{k}, n=\bar{n}$
+		
+		\begin{enumerate}[1$^\circ$]
+			\item $k+n\neq \bar{k}+\bar{n} \qquad$ np. $k+n<\bar{k}+\bar{n} \Rightarrow k+n+1\leq \bar{k}+\bar{n}$\\
+			
+			$f(k,n)=\frac{{(n+k)(n+k+1)}{2}+k}{2}< \frac{{(n+k)(n+k+1)}{2}+k+n+1}{2} = \frac{(k+n)(k+n+1)+2(k+n+1)}{2}=$ 
+			
+			$=\frac{(k+n+1)(k+n+2)}{2}\leq \frac{(\bar{k}+\bar{n})(\bar{k}+\bar{n}+1)}{2}\leq f(\bar{k},\bar{n})$
+			
+			\item $k+n=\bar{k}+\bar{n}$
+			
+			$f(k,n)=f(\bar{k}m\bar{n})$
+			
+			$\frac{(k+n)(k+n+1)}{2}+k=\frac{(\bar{k}+\bar{n})(\bar{k}+\bar{n}+1)}{2}+\bar{k}=\frac{(k+n)(k+n+1)}{2}+\bar{k}$
+			
+			$k=\bar{k} \Rightarrow n=\bar{n}$
+		\end{enumerate}
 	}
 	
 	\item Zdeﬁniować funkcję parzystą i funkcję nieparzystą.
 	\Odp{
+		$\emptyset\neq D \subset \mathbb{R}$, $D$ symetryczny względem $0$ $(x\in D\Leftrightarrow -x\in D)$
 		
+		$f:D\rightarrow\mathbb{R}$ - parzysta $\Leftrightarrow \forall_{x\in D} f(x)=f(-x)$
+		
+		$f:D\rightarrow\mathbb{R}$ - nieparzysta $\Leftrightarrow \forall_{x\in D} f(x)=-f(-x) \qquad (f(-x)=-f(x))$
 	}
 	
 	\item Wykazać, że jeśli dziedzina funkcji rzeczywistej jest zbiorem symetrycznym względem 0, to funkcja ta jest sumą funkcji parzystej i funkcji nieparzystej.

@@ -571,7 +571,7 @@
 		$\begin{bmatrix}
 			1) & T_n\\
 			2) & \forall_{n\geq n_0} T_n\Rightarrow T_{n+1}
-		\end{bmatrix} \Rightarrow \forall_{n\geq n+0} T_n$
+		\end{bmatrix} \Rightarrow \forall_{n\geq n_0} T_n$
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej zapisaną za pomocą należenia liczb naturalnych do pewnego zbioru.
@@ -587,7 +587,12 @@
 	
 	\item Sformułować zasadę indukcji matematycznej z założeniem w drugim kroku dotyczącym „wszystkich poprzedzających liczb”.
 	\Odp{
-		\textcolor{red}{TODO - Nie wiem, które to...}
+		Tak zwana \textbf{zasada indukcji zupełnej}
+		
+		$\begin{bmatrix}
+			1) &0\in B\\
+			2) &(indukcja) n\in B\Rightarrow 0,\dots,n \in B\\
+		\end{bmatrix}\Rightarrow B=\mathbb{N}$
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej „z przeskokiem o dwie liczby”.
@@ -605,7 +610,7 @@
 		$\begin{bmatrix}
 			1)& T_0\\
 			2)& \exists_{n_k}, n_k \rightarrow \infty (k\rightarrow \infty), n_0 = 0, (n_k)$ - silnie rosnący $T_{n_k} \Rightarrow T_{n_{k+1}}\\
-			3)& \forall_n\geq 1 t_n \Rightarrow T_{n-1}
+			3)& \forall_n\geq 1 T_n \Rightarrow T_{n-1}
 		\end{bmatrix} \Rightarrow \forall_{n\in\mathbb{N}} T_n$
 	}
 	
@@ -660,7 +665,7 @@
 				
 				T: $\forall_Y : \#Y=n+1 \Rightarrow \#P(Y)=2^{n+1}$
 				
-				D: Niech $Y$ taki, że $\#Y=n+1$ oraz $\{a\}\in Y$
+				D: Niech $Y$ taki, że $\#Y=n+1$ oraz $a\in Y$
 				
 				$X:=Y\setminus \{a\}, \#X=n$
 				
@@ -800,12 +805,26 @@
 	
 	\item Uzasadnić, że „tricku” w „dowodzie” poprzedniej własności nie można stosować w „dowodzie” tego, że wszystkie koty są czarne. Pokazać błąd w „dowodzie” własności, że wszystkie koty są czarne.
 	\Odp{
-		\textcolor{red}{TODO - ??? - to nie to samo co wyżej?}
+		To co wyżej.
 	}
 	
 	\item Podać błędny indukcyjny „dowód” tego, że wszystkie liczby naturalne są równe i pokazać błąd w dowodzie.
 	\Odp{
-		\textcolor{red}{TODO - Tego nie moge znaleźć (o ile to nie to co samo co wyżej)}
+		$\forall_{m,n\in\mathbb{N}}: m=n$
+		
+		D (fałszywy): Chcemy pokazać, że $\forall_{k\in \mathbb{N}} \forall_{m,n\in\mathbb{N}} \max\{m,n\}=k \Rightarrow m=n$ 
+			
+			\begin{enumerate}[$1^\circ$]
+				\item $k=0 \Rightarrow \max\{m,n\}=0 \Rightarrow m=n=0$ ok
+				\item "$T_k\Rightarrow T_{k+1}$"
+				
+				$\max\{m,n\}=k+1$
+				
+				$\max\{m-1,n-1\}=k \overset{\text{zał ind}}{\Rightarrow} k=m-1=n-1 \Rightarrow m=n$
+			\end{enumerate}
+		Indukcja kończy dowód.
+		
+		Błąd polega na tym, że $m-1$ oraz $n-1$ nie muszą być naturalne.
 	}
 	
 	\item Sformułować twierdzenie Pitagorasa.
@@ -1197,7 +1216,17 @@
 	
 	\item Podać mechanizm tworzenia wzorów redukcyjnych i stosować go w praktyce.
 	\Odp{
-		\textcolor{red}{TODO - No... W sensie jak zapamiętać wzory? Czy padanie podobieństw wykresów?}
+		Sin, Cos i Tg poszły pić do baru.
+		
+		Na początku imprezy (I ćwiartka) wszystkie są w świetnym humorze – każda pije (Sin, Cos, Tg są dodatnie).
+		
+		W II ćwiartce Sin, która po angielsku znaczy "grzech", dalej pije, ale reszta już nie daje rady (Sin +, Cos i Tg -).
+		
+		W III ćwiartce Sin odpada z imprezy – wypiła za dużo (Sin -), Cos też nie pije, bo ma coś ważnego do zrobienia (Cos -), ale Tg jest „tenteges” i dalej pije (Tg +).
+		
+		W IV ćwiartce Cos wraca do siebie i coś tam jeszcze sączy (Cos +), ale Tg, która już piła dwa razy, odpuszcza (Tg -), a Sin wciąż nieprzytomna (Sin -).
+		
+		Tak oto wszystkie trzy maturzystki kończą imprezę – każda z innym bilansem.
 	}
 	\newpage
 	\item Zdeﬁniować funkcje cyklometryczne: arc sin, arc cos, arc tg.
@@ -1461,9 +1490,7 @@
 	
 	\item Określić prawdziwość wzorów Viete’a dla trójmianu kwadratowego o współczynnikach rzeczywistych, dla którego wyróżnik $\Delta$ jest ujemny.
 	\Odp{
-		\textcolor{red}{TODO - Mam tylko pasuje z tego co było na wykładzie...}
-		
-		$x^2+3x+6$
+		$x^2+3x+6=0$
 		
 		$\Delta=-15$
 		
@@ -1499,7 +1526,7 @@
 	
 	\item Co można powiedzieć o wymiernych pierwiastkach wielomianu $a_nx + \dots + a_1x + a_0,$ którego współczynniki są liczbami całkowitymi? Udowodnić to twierdzenie.
 	\Odp{
-		\textcolor{red}{TODO - To nie to co wyżej?}
+		To co wyżej.
 	}
 	
 	\item Określić, co (jaki „obiekt”) może być nazywany rozwiązaniem równania czy nierówności.

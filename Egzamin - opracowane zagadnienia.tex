@@ -576,28 +576,37 @@
 	
 	\item Sformułować zasadę indukcji matematycznej zapisaną za pomocą należenia liczb naturalnych do pewnego zbioru.
 	\Odp{
-		TODO
+		$A\subset N$
+		
+		$\begin{bmatrix}		
+			1^\circ &n_0\in A\\
+			2^\circ &\forall_{n\geq n_0} n\in A \Rightarrow n+1\in A
+		\end{bmatrix}
+		\Rightarrow A\supset \mathbb{N}_{n_0}$
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej z założeniem w drugim kroku dotyczącym „wszystkich poprzedzających liczb”.
 	\Odp{
-		TODO
+		\textcolor{red}{TODO - Nie wiem, które to...}
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej „z przeskokiem o dwie liczby”.
 	\Odp{
-		TODO
-	}
-	
-	\item Sformułować zasadę indukcji matematycznej w wersji indukcji wstecznej.
-	\Odp{
 		\begin{enumerate}[1)]
-			\item $T_0$
-			\item $\exists_{n_k}, n_k \rightarrow \infty (k\rightarrow \infty), n_0 = 0, (n_k)$ - silnie rosnący $T_{n_k} \Rightarrow T_{n_{k+1}}$
-			\item $ \forall_n\geq 1 t_n \Rightarrow T_{n-1}$
+			\item $T_0,T_1$
+			\item $\forall_n\geq 0 (T_n\Rightarrow T_n+2)$
 		\end{enumerate}
 	
-		$\Rightarrow \forall_{n\in\mathbb{N}} T_n$
+		$\Rightarrow \forall_{n\in \mathbb{N}} T_n$
+	}
+	\newpage
+	\item Sformułować zasadę indukcji matematycznej w wersji indukcji wstecznej.
+	\Odp{
+		$\begin{bmatrix}
+			1)& T_0\\
+			2)& \exists_{n_k}, n_k \rightarrow \infty (k\rightarrow \infty), n_0 = 0, (n_k)$ - silnie rosnący $T_{n_k} \Rightarrow T_{n_{k+1}}\\
+			3)& \forall_n\geq 1 t_n \Rightarrow T_{n-1}
+		\end{bmatrix} \Rightarrow \forall_{n\in\mathbb{N}} T_n$
 	}
 	
 	\item Udowodnić równoważność zasady indukcji matematycznej z zasadą minimum.
@@ -642,10 +651,31 @@
 			$\overset{\text{indukcja}}{\Rightarrow} B=\mathbb{N}, \forall_{k\in \mathbb{N}} k\notin A \Rightarrow A=\emptyset$
 		\end{enumerate}
 	}
-	
-	\item Udowodnić indukcyjnie, że zbiór n-elementowy ma $2n$ podzbiorów. Zwrócić szczególną uwagę na sformułowanie drugiego kroku indukcyjnego i odpowiednie podejście do jego dowodu.
+	\newpage
+	\item Udowodnić indukcyjnie, że zbiór n-elementowy ma $2^n$ podzbiorów. Zwrócić szczególną uwagę na sformułowanie drugiego kroku indukcyjnego i odpowiednie podejście do jego dowodu.
 	\Odp{
-		TODO
+		\begin{enumerate}[$1^\circ$]
+			\item $X=\emptyset$
+			\item Z: $\forall_X \#X=n \Rightarrow \#P(X)=2^n$
+				
+				T: $\forall_Y : \#Y=n+1 \Rightarrow \#P(Y)=2^{n+1}$
+				
+				D: Niech $Y$ taki, że $\#Y=n+1$ oraz $\{a\}\in Y$
+				
+				$X:=Y\setminus \{a\}, \#X=n$
+				
+				Niech $B\subset Y,$ wtedy
+				
+				\begin{itemize}
+					\item $a\in B \Rightarrow B=\{a\}\cup C$ - takich jest $2^n$
+					
+					lub\\
+					
+					\item $a\notin B \Rightarrow B\subset X$ - takich jest $2^n$
+				\end{itemize}
+			
+			Czyli $2^n+2^n=2^{n+1}$.
+		\end{enumerate}
 	}
 	
 	\item Udowodnić nierówność między średnią arytmetyczną a geometryczną za pomocą indukcji wstecznej.
@@ -698,7 +728,7 @@
 	
 	\item Udowodnić, że suma kątów w trójkącie wynosi $180^\circ$.
 	\Odp{
-		\includegraphics[width=\linewidth]{tr180.jpeg}
+		\includegraphics[width=0.7\linewidth]{tr180.jpeg}
 		
 		Kąty $\alpha$ i $\delta$ oraz $\beta$ i $\epsilon$ są odpowiednio sobie równe na podstawie katów naprzemianległych wewnętrznie.
 		
@@ -707,11 +737,11 @@
 	
 	\item Udowodnić, że suma kątów w n-kącie wypukłym wynosi $(n - 2) \cdot 180^\circ$.
 	\Odp{
-		\includegraphics[width=\linewidth]{wielo180.jpeg}
+		\includegraphics[width=0.7\linewidth]{wielo180.jpeg}
 		
 		Dowolny wielokąt wypukły o $n$ wierzchołkach można podzielić na $n-2$ trójkątów (w których kąty na siebie nie zachodzą), co daje nam w sumie $(n-2)\cdot 180^\circ$.
 	}
-	
+	\newpage
 	\item Udowodnić, że suma kątów w n-kącie wynosi $(n - 2) \cdot 180^\circ$, wykorzystując twierdzenie o istnieniu przekątnej zawartej w wielokącie.
 	\Odp{
 		\begin{enumerate}[I]
@@ -731,7 +761,7 @@
 			Indukcja kończy dowód. 
 		\end{enumerate}
 	}
-	
+	\newpage
 	\item Udowodnić, że suma kątów w n-kącie wynosi $(n - 2) \cdot 180^\circ$, wykorzystując twierdzenie o uchach (Two Ears Theorem).
 	\Odp{
 		\begin{enumerate}[I]
@@ -755,20 +785,27 @@
 		\textbf{Od Przemka:} gdy dodamy trójkąt, to może się okazać, że otrzymamy wielokąt o tej samej liczbie wierzchołków co na początku - czyli nie ma właściwej realizacji kroku indukcyjnego
 		
 	}
-	
+	\newpage
 	\item Podać błędny indukcyjny „dowód” tego, że wszystkie dziewczęta mają ten sam kolor oczu (lub wszystkie koty są tego samego koloru, itp.) i pokazać błąd w dowodzie.
 	\Odp{
+		Wszystkie dziewczęta mają ten sam kolor oczu.
 		
+		\begin{enumerate}[$1^\circ$]
+			\item Jedna dziewczyna - ok
+			\item Mam zbiór $n$ dziewczyn, dołączamy jedną dziewczynę tworząc zbiór $n+1$ elemetowy, następnie zabieramy dziewczynę z tej grupy (ale inną niż tą, która dołączaliśmy). Otrzymujemy zbiór $n$ elementowy, co z założeń indukcji daje nam, że wszystkie dziewnczyny mają ten sam kolor oczu. Czyli dołączona dziewczyna ma ten sam kolor oczu co pozostałe.
+		\end{enumerate}
+	
+		Błąd polega na tym, że z $T_1\Rightarrow T_2$ mamy możliwą zamianę koloru oczu, ponieważ wymieniamy cały zbiór.
 	}
 	
 	\item Uzasadnić, że „tricku” w „dowodzie” poprzedniej własności nie można stosować w „dowodzie” tego, że wszystkie koty są czarne. Pokazać błąd w „dowodzie” własności, że wszystkie koty są czarne.
 	\Odp{
-		
+		\textcolor{red}{TODO - ??? - to nie to samo co wyżej?}
 	}
 	
 	\item Podać błędny indukcyjny „dowód” tego, że wszystkie liczby naturalne są równe i pokazać błąd w dowodzie.
 	\Odp{
-		
+		\textcolor{red}{TODO - Tego nie moge znaleźć (o ile to nie to co samo co wyżej)}
 	}
 	
 	\item Sformułować twierdzenie Pitagorasa.
@@ -784,12 +821,12 @@
 		Dany jest okrąg oraz punkt $P$ leżacy poza okręgiem. Z punktu $P$ poprowadzono dwie półproste styczne do okręgu odpowiednio w punktach $A$ i $B$. Wowczas:	$$|PA|=|PB|$$
 		
 	}
-	
+	\newpage
 	\item Sformułować twierdzenie Talesa (z wszystkimi możliwymi proporcjami).
 	\Odp{
 		Dane są dwie proste nierównoległe oraz dwie proste równoległe przecinające te proste (zobacz rysunek).
 		
-		\includegraphics[width=\linewidth]{tales.jpeg}
+		\includegraphics[width=0.7\linewidth]{tales.jpeg}
 		
 		Wówczas zachodzi:
 		$$\frac{a}{c}=\frac{b}{d}=\frac{a+b}{c+d}\qquad\frac{a}{a+b}=\frac{c}{c+d}=\frac{e}{f}$$
@@ -797,11 +834,11 @@
 	
 	\item Udowodnić twierdzenie Talesa metodą z „Elementów” Euklidesa.
 	\Odp{
-		\includegraphics[width=\linewidth]{tales_proof.jpeg}
+		\includegraphics[width=0.7\linewidth]{tales_proof.jpeg}
 		
 		$$\frac{AP}{BP}=\frac{P_{\Delta APQ}}{P_{\Delta BPQ}}=\frac{P_{\Delta APQ}}{P_{\Delta QPC}}=\frac{AQ}{CQ}$$
 	}
-	
+	\newpage
 	\item Wykazać, że jeśli w trójkącie dwa boki są równe, to i dwa kąty są równe.
 	\Odp{
 		\includegraphics[width=0.5\linewidth]{trj_proof_1.jpeg}
@@ -815,7 +852,7 @@
 		
 		$\Delta ABD$ i $\Delta ABD$ przystajce (cecha BBB) $\Rightarrow \alpha_1=\alpha_2\Rightarrow$ trójkąty u góry są przystające $\Rightarrow \beta_1=\beta_2$
 	}
-	
+	\newpage
 	\item Wykazać, że jeśli w trójkącie dwa kąty są równe, to i dwa boki są równe.
 	\Odp{
 		$\alpha_1=\alpha_2\Rightarrow \Delta$ przystające $\Rightarrow b_1=b_2$
@@ -840,7 +877,7 @@
 		$.
 		
 	}
-	
+	\newpage
 	\item Udowodnić, że wysokości w trójkącie (precyzyjnie: proste zawierające wysokości w trójkącie) przecinają się w jednym punkcie.
 	\Odp{
 		\includegraphics[width=0.6\linewidth]{trj_proof_6.jpeg}
@@ -856,7 +893,7 @@
 	
 		Wówczas $OO_B=OO_A \wedge OO_C=OO_A \Rightarrow OO_C=OO_B$, czyli jest to dwusieczna kąta $\angle BAC$ 
 	}
-	
+	\newpage
 	\item Udowodnić, że środkowe w trójkącie przecinają się w jednym punkcie, dzielącym każdą	ze środkowych w stosunku $1:2$.
 	\Odp{
 		\includegraphics[width=0.6\linewidth]{trj_proof_8.jpeg}
@@ -898,7 +935,7 @@
 		
 		Np. $f:\mathbb{C} \longrightarrow \mathbb{R}, \qquad z\longmapsto \text{Re}z$
 	}
-	
+	\newpage
 	\item Zdefiniować injekcję, surjekcję i bijekcję.
 	\Odp{
 		Injekcja ($f$ różnowartościowa) $\Leftrightarrow f(x_1)=f(x_2)\Rightarrow x_1=x_2$ ($x_1\neq x_2 \Rightarrow f(x_1)\neq f(x_2)$)
@@ -956,7 +993,7 @@
 			$k=\bar{k} \Rightarrow n=\bar{n}$
 		\end{enumerate}
 	}
-	
+	\newpage
 	\item Zdeﬁniować funkcję parzystą i funkcję nieparzystą.
 	\Odp{
 		$\emptyset\neq D \subset \mathbb{R}$, $D$ symetryczny względem $0$ $(x\in D\Leftrightarrow -x\in D)$
@@ -1045,7 +1082,7 @@
 		$$\chi_{\mathbb{Q}}(x)=\UkladRownan{1 \text{ gdy } x\in\mathbb{Q}}{0 \text{ gdy } x\notin\mathbb{Q}}$$
 		Okresem tej funkcji jest każde $p\in\mathbb{Q}: p>0$.
 	}
-	
+	\newpage
 	\item Podać przykład funkcji niestałej, której okresami są 1 oraz $\sqrt{2}$.
 	\Odp{
 		$$g(x)=\UkladRownan{1 \text{ gdy } x=a+b\sqrt{2}: a,b\in \mathbb{Z}}{0 \text{ dla pozostałych } x}$$
@@ -1074,7 +1111,7 @@
 	\Odp{
 		Zostały dobrze zdefiniowane na podstawie podobieństwa trójkątów.
 	}
-	
+	\newpage
 	\item Zdeﬁniować funkcje sinus, cosinus, tangens, cotangens dla dowolnego kąta.
 	\Odp{
 		\includegraphics[width=\linewidth]{tryg_def.jpeg}
@@ -1106,7 +1143,7 @@
 		W dowolnym trójkącie zachodzi:
 		$$\frac{a}{\sin\alpha}=\frac{b}{\sin\beta}=\frac{c}{\sin\gamma}=2R$$
 	}
-	
+	\newpage
 	\item Podać twierdzenie cosinusów.
 	\Odp{
 		W dowolnym trójkącie zachodzi:
@@ -1137,7 +1174,7 @@
 		W dowolnym trójkącie prostokątnym zachodzi
 		$$\sin^2\alpha+\cos^2\alpha=\frac{a^2}{c^2}+\frac{b^2}{c^2}=\frac{a^2+b^2}{c^2}=\frac{c^2}{c^2}=1$$	
 	}
-	
+	\newpage
 	\item Udowodnić wzór: $\sin^2 z + \cos^2 z = 1$ dla argumentu zespolonego.
 	\Odp{
 		$$\sin^2z+\cos^2z = (\cos z+i\sin z)(\cos z-i\sin z)=e^{iz}e^{-iz}=e^0=1$$
@@ -1162,7 +1199,7 @@
 	\Odp{
 		\textcolor{red}{TODO - No... W sensie jak zapamiętać wzory? Czy padanie podobieństw wykresów?}
 	}
-	
+	\newpage
 	\item Zdeﬁniować funkcje cyklometryczne: arc sin, arc cos, arc tg.
 	\Odp{
 		$\arcsin: [-1,1] \rightarrow [-\frac{\pi}{2},\frac{\pi}{2}]$
@@ -1249,7 +1286,7 @@
 		
 		Weźmy liczbę $p:=p_1\cdotp_2\cdot\dots p_n + 1$. Wtedy $\forall_{p_i} p_i\not| p \Rightarrow p$ jest liczbą pierwszą. Sprzeczność. 
 	}
-	
+	\newpage
 	\item Udowodnić, że liczb pierwszych jest nieskończenie wiele metodą Kummera.
 	\Odp{
 		Hp. $p_1<p_2<\dots<p_n$ wszystkie liczby pierwsze.
@@ -1293,7 +1330,7 @@
 		
 		$n=p_1^{\alpha_1}\cdot \dots \cdot p_n^{\alpha_1}$ sprzeczność
 	}
-	
+	\newpage
 	\item Udowodnić, że dla każdej liczby naturalnej n większej od 2 w przedziale $[n, n!)$ znajduje
 	się liczba pierwsza.
 	\Odp{
@@ -1367,7 +1404,11 @@
 	
 	\item Sformułować hipotezę Riemanna.
 	\Odp{
-		Prosze... Tylko bez dowodu...
+		Wszystkie nietrywialne miejsca zerowe funkcji dzeta leża na prostej $\Re z= \frac{1}{2}$
+		
+		\includegraphics[width=0.75\linewidth]{hpriemanna.jpeg}
+		
+		Proszę... Tylko bez dowodu...
 	}
 	
 	\item Zdeﬁniować wielomian (zmiennej rzeczywistej lub zespolonej). Jak nazywają się współczynniki przy najwyższej i najniższej potędze?
@@ -1412,7 +1453,7 @@
 		
 		$x_1+x_2 = -\frac{b}{a}\qquad x_1x_2=\frac{c}{a}$
 	}
-	
+	\newpage
 	\item Pokazać mechanizm tworzenia wzorów Viete’a dla wielomianu dowolnego stopnia.
 	\Odp{
 		Podobnie jak wyżej... (nie będę tego pisał, Ola je udowodniła na ćwiczeniach!)
@@ -1458,7 +1499,7 @@
 	
 	\item Co można powiedzieć o wymiernych pierwiastkach wielomianu $a_nx + \dots + a_1x + a_0,$ którego współczynniki są liczbami całkowitymi? Udowodnić to twierdzenie.
 	\Odp{
-		TODO
+		\textcolor{red}{TODO - To nie to co wyżej?}
 	}
 	
 	\item Określić, co (jaki „obiekt”) może być nazywany rozwiązaniem równania czy nierówności.
@@ -1467,7 +1508,7 @@
 		
 		Nierówność $\rightarrow$ zbiór
 	}
-
+	\newpage
 	\item Rozwiązywać podstawowe równania i nierówności.
 	\Odp{
 		\textbf{Zostawiam jako ćwiczenie}
@@ -1512,15 +1553,19 @@
 			\item przygotowanie do działań na $\mathbb{C}$
 		\end{itemize}
 	}
-	
+	\newpage
 	\item Podać definicję procentu.
 	\Odp{
-		Procent jest to TODO
+		Procent jest to sposób zapisu stosunku dwóch wielkości, w którym liczba wyrażona jest jako ułamek o mianowniku 100. Oznaczamy go symoblem $\%$.
 	}
 	
 	\item Wyjaśnić różnicę między procentem a punktem procentowym.
 	\Odp{
-	
+		\begin{center}
+			Procent $\neq$ Punkt procentowy
+		\end{center}
+		
+		Punkt procentowy to różnica między dwoma wartościami procentowymi.
 	}
 	
 	\item Na czym polega błąd definiowania „ignotum per ignotum”?
@@ -1536,7 +1581,7 @@
 		
 		\includegraphics[width=\linewidth]{czwor.jpg}
 	}
-	
+	\newpage
 	\item Podać definicję trapezu i wyjaśnić, dlaczego inne definiowanie nie jest właściwe.
 	\Odp{
 		Trapez jest to czworokąt, który posiada przynajmniej jedną parę boków równoległych.
@@ -1576,7 +1621,7 @@
 	\Odp{
 		$P(A)=\frac{\text{liczba zdarzeń sprzyjających}}{\text{liczba zdarzeń elemetarnych}}$ - przy założeniu jednakowo prawdopodobych zdarzeń
 	}
-	
+	\newpage
 	\item Podać i wyjaśnić paradoks Bertranda.
 	\Odp{
 		Na okręgu o promieniu 1 wybieramy losowo cieńciwe. Obliczyć prawdopodobieństwo, że jest ona dłuższa niż bok trójkąta równobocznego wpisanego w ten okrąg.
@@ -1605,7 +1650,7 @@
 	\Odp{
 		Tak, bo punkty $\{\frac{\pi}{4}+k\pi:k\in\mathbb{Z}\}$ są poza dziedziną funkcji.
 	}
-	
+	\newpage
 	\item Udowodnić równoważność definicji Cauchy’ego i definicję Heinego ciągłości funkcji.
 	\Odp{
 		D: \textbf{ciągłość Cauchy'ego $\Rightarrow$ ciągłość Heinego}
@@ -1662,7 +1707,7 @@
 		\href{https://tenor.com/view/derivative-gif-23137892}{Fajny gif 2}\hspace{1cm}
 		\href{https://tenor.com/view/derivada-gif-22383091}{Fajny gif 3}
 	}
-	
+	\newpage
 	\item Podać warunek konieczny istnienia ekstremum lokalnego funkcji różniczkowalnej.
 	\Odp{
 		$f$ ma ekstremum lokalne w $x_0$ $\Leftrightarrow f'(x_0)=0$ 
@@ -1716,7 +1761,7 @@
 	
 		To: $\lim\limits_{x\rightarrow x_0} \frac{f(x)}{g(x)}=g$
 	}
-	
+	\newpage
 	\item Wytłumaczyć, dlaczego przy korzystaniu z reguły de l’Hospitala nie należy używać skrótu „litera H napisana nad znakiem równości”.
 	\Odp{
 		A co? Jak się korzysta z właśności Darboux to się pisze literkę "\textbf{D}"?

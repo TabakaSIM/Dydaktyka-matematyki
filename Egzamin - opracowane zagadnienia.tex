@@ -335,7 +335,7 @@
 	
 	\item Opisać (podać schemat) konstrukcji Cantora zbioru liczb rzeczywistych.
 	\Odp{
-		$\mathbb{Q} \quad (x_n)$ - ciąg Cauchego $\Leftrightarrow \forall_{\epsilon>0} \exists_{k} \forall_{n,m\geq k} |x_n-x_m|<\epsilon$
+		$\mathbb{Q} \quad (x_n)$ - ciąg Cauch'ego $\Leftrightarrow \forall_{\epsilon>0} \exists_{k} \forall_{n,m\geq k} |x_n-x_m|<\epsilon$
 		
 		$\frac{X}{\sim}: (a_n)\sim(b_n) \Leftrightarrow \forall_{\epsilon>0} \exists_N \forall_{n\geq N} |a_n-b_n|<\epsilon$\\
 		$[(a_n)]$ - granica (liczba rzeczywista)
@@ -376,9 +376,11 @@
 	\Odp{
 		$(A,B) \sim (A',B') \Leftrightarrow$ element największy $A$ $=$ emelent najwięszy $B'$
 		
-		$\underset{\alpha}{(A,B)} \underset{\gamma}{(C,D)}$ 
+		np. $((-\infty,3]\cap\mathbb{Q},(3,\infty)\cap\mathbb{Q})\sim ((-\infty,3)\cap\mathbb{Q},[3,\infty)\cap\mathbb{Q}) $\\
 		
-		$\alpha<\gamma \Leftrightarrow A\subset C,\: A\neq C$
+		Niech będą dane przekroje Dedekinda $\underset{\alpha}{(A,B)} \underset{\gamma}{(C,D)}$ 
+		
+		Wówczas $\alpha<\gamma \Leftrightarrow A\subset C,\: A\neq C$
 		
 		$(A,B) + (C,D) = (A+C, B + D)$
 	}
@@ -400,14 +402,14 @@
 	\Odp{
 		Zasada Archimedesa (tw o małych piechurach)
 		$$\forall_{p>0} \forall_{\alpha>0} \exists_{n\in\mathbb{N}} : n\cdot\alpha>p$$
-		D: $p>0, \: \alpha>0$
-		Hp. $\forall_{n\in\mathbb{N}} n\leq p$
+		D: Niech $p>0, \: \alpha>0$
 		
-		$A=\{n\alpha : n\in\mathbb{N}\}$ - ograniczony z góry
-		$K$ - kres górny zbioru $A \forall_n \alpha n \leq K$
-		$$\exists_{n_0}: K-\alpha < n_0\alpha$$
-		$$(n_0+1)\alpha = n_0\alpha + \alpha$$
-		$$K<n_0\alpha + \alpha$$ sprzeczność
+		Hp. $\forall_{n\in\mathbb{N}}\: n\leq p$
+		
+		$A=\{n\cdot\alpha  : n\in\mathbb{N}\}$ - ograniczony z góry,
+		$K$ - kres górny zbioru $A$,  $\forall_n \:n\cdot\alpha \leq K$
+		$$\exists_{n_0}: K-\alpha < n_0\cdot\alpha$$
+		$$K<n_0\cdot\alpha + \alpha = (n_0+1)\alpha$$ sprzeczność
 	}
 	
 	\item Podać definicję zbioru uporządkowanego w sposób gęsty.
@@ -423,12 +425,11 @@
 	
 	\item Udowodnić, że między dowolne dwie liczby rzeczywiste można wstawić liczbę wymierną.
 	\Odp{
-		$$\forall_{a,b\in \mathbb{R}, a<b}\exists_{p\in\mathbb{Q}}: a<p<b$$
+		$$\forall_{a,b\in \mathbb{R},\: a<b}\:\exists_{p\in\mathbb{Q}}: a<p<b$$
 		
-		D: $\frac{1}{b-a}>0 \exists_{n\in\mathbb{N}}: n>\frac{1}{b-a} \Rightarrow \frac{1}{n}<b-a$
+		D: $\frac{1}{b-a}>0\: \exists_{n\in\mathbb{N}}: n>\frac{1}{b-a} \Rightarrow \frac{1}{n}<b-a$
 		
-		$k:=max\{k\in\mathbb{Z}: k\leq na\} \Rightarrow a<\frac{k+1}{n}$
-		$(?) \frac{k+1}{n}<b$
+		$k:=max\{k\in\mathbb{Z}: k\leq na\} \Rightarrow a<\frac{k+1}{n}\qquad (?)\: \frac{k+1}{n}<b$
 		$$n>\frac{1}{b-a}$$
 		$$n\cdot(b-a)>1$$
 		$$nb>1+na\geq k+1 \Rightarrow \frac{k+1}{n}<b$$
@@ -593,18 +594,16 @@
 		
 		$\begin{bmatrix}
 			1) &0\in B\\
-			2) &(indukcja) n\in B\Rightarrow 0,\dots,n \in B\\
+			2) &(indukcja) \; n\in B\Rightarrow 0,\dots,n \in B\\
 		\end{bmatrix}\Rightarrow B=\mathbb{N}$
 	}
 	
 	\item Sformułować zasadę indukcji matematycznej „z przeskokiem o dwie liczby”.
 	\Odp{
-		\begin{enumerate}[1)]
-			\item $T_0,T_1$
-			\item $\forall_n\geq 0 (T_n\Rightarrow T_n+2)$
-		\end{enumerate}
-	
-		$\Rightarrow \forall_{n\in \mathbb{N}} T_n$
+		$\begin{bmatrix}
+			1)&T_0,T_1\\
+			2)&\forall_{n\geq 0} \:(T_n\Rightarrow T_n+2)
+		\end{bmatrix} \Rightarrow \forall_{n\in \mathbb{N}} T_n$
 	}
 	\newpage
 	\item Sformułować zasadę indukcji matematycznej w wersji indukcji wstecznej.
@@ -612,8 +611,8 @@
 		$\begin{bmatrix}
 			1)& T_0\\
 			2)& \exists_{n_k}, n_k \rightarrow \infty (k\rightarrow \infty), n_0 = 0, (n_k)$ - silnie rosnący $T_{n_k} \Rightarrow T_{n_{k+1}}\\
-			3)& \forall_n\geq 1 T_n \Rightarrow T_{n-1}
-		\end{bmatrix} \Rightarrow \forall_{n\in\mathbb{N}} T_n$
+			3)& \forall_{n\geq 1} \: T_n \Rightarrow T_{n-1}
+		\end{bmatrix} \Rightarrow \forall_{n\in\mathbb{N}}\: T_n$
 	}
 	
 	\item Udowodnić równoważność zasady indukcji matematycznej z zasadą minimum.
@@ -870,7 +869,7 @@
 	\Odp{
 		\includegraphics[width=0.3\linewidth]{trj_proof_2.jpeg}
 		
-		$\Delta ABD$ i $\Delta ABD$ przystajce (cecha BBB) $\Rightarrow \alpha_1=\alpha_2\Rightarrow$ trójkąty u góry są przystające $\Rightarrow \beta_1=\beta_2$
+		$\Delta ACD$ i $\Delta BCD$ przystające (cecha BBB) $\Rightarrow \alpha_1=\alpha_2\Rightarrow$ trójkąty u góry są przystające (cecha BKB) $\Rightarrow \beta_1=\beta_2$
 	}
 	\newpage
 	\item Wykazać, że jeśli w trójkącie dwa kąty są równe, to i dwa boki są równe.
@@ -1422,7 +1421,7 @@
 	\item Wykazać, że dla dowolnej liczby naturalnej $n$ istnieje $n$-wyrazowy ciąg arytmetyczny,
 	którego wyrazami są liczby niepierwsze.
 	\Odp{
-		D: $\underset{2|}{(n+1)!+2},\underset{2|}{(n+1)!+3},\dots,\underset{n+1|}{(n+1)!(n+1)}$
+		D: $\underset{2|}{(n+1)!+2},\underset{3|}{(n+1)!+3},\dots,\underset{n+1|}{(n+1)!(n+1)}$
 	}
 	
 	\item Podać zasadę konstrukcji spirali Ulama.

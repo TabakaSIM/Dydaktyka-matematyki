@@ -758,7 +758,7 @@
 			
 			\includegraphics[width=\linewidth]{1ind180.jpeg}
 			
-			Przekątna dzieli $n+1$-kąt na $k$-kąt i $l$-kąt $(k,l\leq n, k+l=n+3)$.\\
+			Przekątna dzieli $(n+1)$-kąt na $k$-kąt i $l$-kąt $(k,l\leq n, k+l=n+3)$.\\
 			
 			Suma kątów w $k$-kącie wynosi $(k-2)\cdot180^\circ$, podobnie w $l$-kącie wynosi $(l-2)\cdot180^\circ$.\\
 			
@@ -990,7 +990,7 @@
 	
 		$k+n=s-\frac{p(p+1)}{2}+\frac{p(p+3)}{2}-s=\frac{p(p+3-p-1)}{2}=\frac{2p}{p}=p$
 		
-		$f(k,n)=\frac{(k+n)(k+n+1)}{2}+k=\frac{p(p+1)}{2}+s-\frac{p(p-1)}{2}=s$\\\\
+		$f(k,n)=\frac{(k+n)(k+n+1)}{2}+k=\frac{p(p+1)}{2}+s-\frac{p(p+1)}{2}=s$\\\\
 		
 		Czy injekcja?	
 		
@@ -999,13 +999,13 @@
 		\begin{enumerate}[1$^\circ$]
 			\item $k+n\neq \bar{k}+\bar{n} \qquad$ np. $k+n<\bar{k}+\bar{n} \Rightarrow k+n+1\leq \bar{k}+\bar{n}$\\
 			
-			$f(k,n)=\frac{{(n+k)(n+k+1)}{2}+k}{2}< \frac{{(n+k)(n+k+1)}{2}+k+n+1}{2} = \frac{(k+n)(k+n+1)+2(k+n+1)}{2}=$ 
+			$f(k,n)=\frac{{(n+k)(n+k+1)}+2k}{2}< \frac{{(n+k)(n+k+1)}+2k+2n+2}{2} = \frac{(k+n)(k+n+1)+2(k+n+1)}{2}=$ 
 			
 			$=\frac{(k+n+1)(k+n+2)}{2}\leq \frac{(\bar{k}+\bar{n})(\bar{k}+\bar{n}+1)}{2}\leq f(\bar{k},\bar{n})$
 			
 			\item $k+n=\bar{k}+\bar{n}$
 			
-			$f(k,n)=f(\bar{k}m\bar{n})$
+			$f(k,n)=f(\bar{k},\bar{n})$
 			
 			$\frac{(k+n)(k+n+1)}{2}+k=\frac{(\bar{k}+\bar{n})(\bar{k}+\bar{n}+1)}{2}+\bar{k}=\frac{(k+n)(k+n+1)}{2}+\bar{k}$
 			
@@ -1150,7 +1150,7 @@
 	\Odp{
 		$\mathbb{C}$
 		
-		$\sin z=\sum_{n=0}^{\infty}(-1)^n\frac{z^{n+1}}{(2n+1)!}$
+		$\sin z=\sum_{n=0}^{\infty}(-1)^n\frac{z^{2n+1}}{(2n+1)!}$
 		
 		$\cos z=\sum_{n=0}^{\infty}(-1)^n\frac{z^{2n}}{(2n)!}$
 		
@@ -1445,6 +1445,10 @@
 		Wielomianem $n$-tego stopnia nazywamy funkcję
 		$$W(z)=a_nz^n+a_{n-1}z^{n-1}+\dots+a_1z^1+a_0,$$
 		gdzie $\{a_i\}_{i=1}^n$ to liczby ze zbioru $\mathbb{C}$
+		
+		$a_n$ - współczynnik kierunkowy (lub współczynnik wiodący)
+		
+		$a_0$ - wyraz wolny
 	}
 	
 	\item Wykazać, że wielomian zmiennej rzeczywistej o współczynnikach rzeczywistych stopnia nieparzystego ma zawsze co najmniej jeden pierwiastek rzeczywisty.

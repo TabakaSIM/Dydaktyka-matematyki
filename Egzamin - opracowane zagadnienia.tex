@@ -364,7 +364,7 @@
 	
 	\item Określić, co to znaczy, że przekrój Dedekinda daje lukę.
 	\Odp{
-		Przekrój Dedekinda daje lukę \witw w klasie dolnej nie ma elementu największego i w klasie górnej nie ma elementu najmniejszego.
+		Przekrój Dedekinda daje lukę \witw w klasie dolnej nie ma elementu największego lub w klasie górnej nie ma elementu najmniejszego.
 	}
 	
 	\item Opisać (podać schemat) konstrukcji Dedekinda zbioru liczb rzeczywistych.
@@ -404,7 +404,7 @@
 		$$\forall_{p>0} \forall_{\alpha>0} \exists_{n\in\mathbb{N}} : n\cdot\alpha>p$$
 		D: Niech $p>0, \: \alpha>0$
 		
-		Hp. $\forall_{n\in\mathbb{N}}\: n\leq p$
+		Hp. $\forall_{n\in\mathbb{N}}\: n\cdot\alpha\leq p$
 		
 		$A=\{n\cdot\alpha  : n\in\mathbb{N}\}$ - ograniczony z góry,
 		$K$ - kres górny zbioru $A$,  $\forall_n \:n\cdot\alpha \leq K$
@@ -1725,9 +1725,9 @@
 	
 	\item Podać definicję pochodnej funkcji określonej na podzbiorze $D$ zbioru $\mathbb{R}$ o wartościach rzeczywistych w punkcie $x_0 \in D$. Jakie założenie należy uczynić o zbiorze $D$, by można było mówić o pochodnej funkcji?
 	\Odp{
-		$f:D\rightarrow \mathbb{R}, D\subset \mathbb{R}$ - \underline{otwarty}, $p\in D$
+		$f:D\rightarrow \mathbb{R}, D\subset \mathbb{R}$ - \underline{otwarty}, $x_0\in D$
 		
-		$f'(p)=\lim\limits_{x\rightarrow p} \frac{f(x)-f(p)}{x-p}$
+		$f'(x_0)=\lim\limits_{x\rightarrow x_0} \frac{f(x)-f(x_0)}{x-x_0}$
 		
 		
 	}

@@ -1306,7 +1306,7 @@
 	\Odp{
 		$p|a$ i $p|b$ $\Rightarrow p|(a-b)$
 		
-		D: $\exists_k:a=k\cdotp$ i $\exists_m:b=m\cdotp$ $\Rightarrow a-b=p(k-m) \Rightarrow p|p(k-m) \Rightarrow p|a-b$
+		D: $\exists_k:a=k\cdot p$ i $\exists_m:b=m\cdot p$ $\Rightarrow a-b=p(k-m) \Rightarrow p|p(k-m) \Rightarrow p|a-b$
 	}
 	
 	\item Udowodnić, że liczb pierwszych jest nieskończenie wiele metodą Euklidesa.
@@ -1320,7 +1320,7 @@
 	\Odp{
 		Hp. $p_1<p_2<\dots<p_n$ wszystkie liczby pierwsze.
 		
-		$p:=p_1\cdot p_2\cdot\dots\cdot p_n > 2$. Zalóżmy, że $p-1$ to iloczyn liczb pierwszych. Wówczas $\exists_j : p_j|p$ i $p_j|p-1$ $p_j|p-(p-1) \Rightarrow p_j|1$ sprzeczność
+		$p:=p_1\cdot p_2\cdot\dots\cdot p_n > 2$. Załłóżmy, że $p-1$ to iloczyn liczb pierwszych. Wówczas $\exists_j : p_j|p$ i $p_j|p-1$ $\Rightarrow$ $p_j|p-(p-1) \Rightarrow p_j|1$ sprzeczność
 	}
 	
 	\item Udowodnić, że liczb pierwszych jest nieskończenie wiele metodą Stieltjesa.
@@ -1331,7 +1331,7 @@
 		
 		$p=k\cdot m: k,m>1$
 		
-		$\forall_i p_i$ dzieli dokładnie jedną z liczb $k$ lub $m$
+		$\forall_i\:´ p_i$ dzieli dokładnie jedną z liczb $k$ lub $m$
 		
 		Rozważmy $k+m>1$. Gdyby $\exists_{p_i}\:: p_i|k+m$, to
 		
@@ -1345,8 +1345,8 @@
 	\item Udowodnić, że liczb pierwszych jest nieskończenie wiele metodą Eulera.
 	\Odp{
 		\begin{enumerate}[1)]
-			\item $p\in\mathbb{P} \Rightarrow \frac{1}{p} \qquad \sum_{k=0}^{\infty}$
-			\item $p,q$ - różne liczby pierwsze
+			\item $p\in\mathbb{P} \Rightarrow \frac{1}{p} < 1 \qquad \sum_{k=0}^{\infty}\frac{1}{p^k}=\frac{1}{1-\frac{1}{p}}$
+			\item $p,q$ - różne liczby pierwsze (wszystkie)
 			
 			$(\sum_{k=0}^{\infty}\frac{1}{p^k})(\sum_{k=0}^{\infty}\frac{1}{q^k}) = \frac{1}{1-\frac{1}{p}}\cdot\frac{1}{1-\frac{1}{q}}=\sum \frac{1}{p^\alpha q^\beta} : \alpha,\beta\geq 0$ każda para $(\alpha,\beta)$ występuje dokładnie raz.
 		\end{enumerate}

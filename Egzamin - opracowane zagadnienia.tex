@@ -554,9 +554,9 @@
 	\begin{enumerate}[1)]
 		\item $\exists_n : n\in\mathbb{N}$ ($\neq \emptyset$)
 		\item $\forall_{k\in\mathbb{N}} \exists_{n\in\mathbb{N}}:k<n$ (nie ograniczony z góry)
-		\item $\forall_{k,n\in \mathbb{N}} k<m \Rightarrow ~(m<k)$ (antysymetria)
+		\item $\forall_{k,n\in \mathbb{N}} k<n \Rightarrow \sim (n<k)$ (antysymetria)
 		\item $(A\subset\mathbb{N}, \exists_{k\in A})(\neq\emptyset) \Rightarrow \exists_{i\in A} \forall_{n\in A} i\leq n$ (zasada minimum)
-		\item $(A\subset\mathbb{N}, \exists_{k\in A})(\neq\emptyset)$ oraz  $ (\exists_{i\in \mathbb{N}} \forall_{m\in A} m\leq i)\Rightarrow \exists_{k\in A} \forall_{l\in A} l\leq j$ (ograczinony z góry ma element największy)
+		\item $(A\subset\mathbb{N}, \exists_{k\in A})(\neq\emptyset)$ oraz  $ (\exists_{i\in \mathbb{N}} \forall_{m\in A} m\leq i)\Rightarrow \exists_{j\in A} \forall_{l\in A} l\leq j$ (ograczinony z góry ma element największy)
 	\end{enumerate}
 	}
 	\newpage
@@ -1092,7 +1092,7 @@
 	\Odp{
 		Niech $f:\mathbb{R}\rightarrow \mathbb{R}$, wtedy
 		
-		$f-\text{ okresowa } \Leftrightarrow \exists_{T>0}: \forall_{x\in \mathbb{R}} f(x)=f(x+T)$
+		$f-\text{ okresowa } \Leftrightarrow \exists_{T>0}: \forall_{x\in \mathbb{R}}\: f(x)=f(x+T)$
 		
 	}
 	
@@ -1693,9 +1693,9 @@
 		Ustalmy $\epsilon>0$. Pytamy się, czy $\exists_k n\geq k |f(x_n)-f(p)|<\epsilon$
 		
 		Z definicji ciągłości Cauchy'ego $\exists_{\delta} |x-p|<
-		delta \Rightarrow |f(x)-f(p)|<\epsilon$
+		\delta \Rightarrow |f(x)-f(p)|<\epsilon$
 		
-		Czyli $\exists_k : n\geq k \Rightarrow |x_n-p|<\delta$\\\\
+		Ponieważ $(x_n)$ jest zbieżny to $\exists_k : n\geq k \Rightarrow |x_n-p|<\delta$\\\\
 		
 		\textbf{ciągłość Heinego $\Rightarrow$ ciągłość Cauchy'ego}
 		
